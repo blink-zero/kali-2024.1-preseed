@@ -1,5 +1,5 @@
 
-# Automated Installation of Kali Linux using Preseed File
+# Automated Installation of Kali Linux 2024.1 using Preseed File
 
 This repository contains a preseed configuration file for automated installation of Kali Linux. 
 The preseed file automates the installation process by setting various configuration options for localization, time zone, network, account setup, partitioning, software selection, and post-installation commands.
