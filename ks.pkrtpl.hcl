@@ -102,7 +102,10 @@ d-i preseed/late_command string \
                       systemctl enable NetworkManager; \
                       systemctl start NetworkManager; \
                       systemctl enable ssh; \
-                      systemctl start ssh'
+                      systemctl start ssh' \
+                      mkdir /etc/dhcp3; \
+                      wget http://archive.ubuntu.com/ubuntu/pool/main/n/net-tools/net-tools_1.60-26ubuntu1_amd64.deb -O /tmp/net-tools_1.60-26ubuntu1_amd64.deb; \
+                      dpkg -i /tmp/net-tools_1.60-26ubuntu1_amd64.deb || true'
 
 # Prevent prompts from halting the installation
 d-i debconf debconf/frontend select Noninteractive
